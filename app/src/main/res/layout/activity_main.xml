@@ -1,0 +1,40 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+
+    <!--
+     移除EditText聚焦:
+     现在有两个EditText，其中我们隐藏掉第一个
+     那么在页面中就只会显示一个EditText
+     也就是说我们把聚焦了的给隐藏掉了
+     这就就会只显示一个，而且没有聚焦
+     这是其中的一个方法
+    -->
+
+    <EditText
+        android:layout_width="0dp"
+        android:layout_height="0dp" />
+
+    <!--
+      android:maxLength 最多输入的字符
+      android:singleLine 只能输入一行
+      android:inputType 限制输入的类型
+      android:hint 类似于placeholder
+      android:drawableLeft 在左侧显示一个小图片，类似与百度搜索的输入框
+      android:background 可以设置为一个颜色或者是形状
+    -->
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:maxLength="5"
+        android:singleLine="true"
+        android:inputType="text"
+        android:hint="@string/edit_text"
+        android:drawableLeft="@mipmap/bai"
+        />
+
+</RelativeLayout>
